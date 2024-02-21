@@ -1,0 +1,176 @@
+  @primary-color: var(--theme-color, #563493);
+  .container {
+    --space-xxl: 18px;
+    --space-xl: 14px;
+    --space-lg: 12px;
+    --space-md: 10px;
+    --space-sm: 8px;
+    --space-xs: 6px;
+    --space-xxs: 5px;
+  }
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .flex-align-center {
+    display: flex;
+    align-items: center;
+  }
+  
+  .flex-justify-center {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .font-weight-normal {
+    font-weight: 500;
+  }
+
+  .font-weight-small {
+    font-weight: 300;
+  }
+
+  .font-size-normal {
+    font-size: 12px;
+  }
+
+  .font-size-icon {
+    font-size: 25px;
+  }
+
+  .pos-ab {
+      position: absolute;
+  }
+
+  .pos-re {
+    position: relative;
+  }
+
+  .r-m-p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .color-white {
+    color: #fff;
+  }
+
+  .bg-color-primary {
+    background-color: var(--theme-color);
+  }
+  
+  .global-font-color {
+    color: var(--theme-color);
+  }
+  .global-default-font-color {
+    color: var(--font-default-gray);
+  }
+  .global-background-image-color {
+    background-color: var(--global-background-color);
+    background-image: var(--global-background-image);
+  }
+  .nav-background-color {
+    background-color: var(--nav-back-ground-color);
+  }
+
+  .vam {
+    vertical-align: middle;
+  }
+
+  .all-percent-h-w {
+    width: 100%;
+    height: 100%;
+  }
+
+  .all-percent-w {
+    width: 100%;
+  }
+
+  .m-l-r-xxs {
+    margin-left: var(--space-xxs);
+    margin-right: var(--space-xxs);
+  }
+
+  .m-t-xl {
+    margin-top: var(--space-xxl);
+  }
+
+  .m-l-lg {
+    margin-left: var(--space-lg);
+  }
+  .m-l-md {
+    margin-left: var(--space-md);
+  }
+  .m-l-sm {
+    margin-left: var(--space-sm);
+  }
+  .m-l-xs {
+    margin-left: var(--space-xs);
+  }
+  
+  // 单行省略
+  .ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  // 多行省略
+  .multiline-ellipsis(@lineNum) {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: @lineNum;
+    -webkit-box-orient: vertical;
+  }
+
+  .m-auto {
+    margin: auto!important;
+  }
+  
+
+  .tblr-0 {
+    left: 0;
+    bottom: 0;
+  }
+
+  .tac {
+    text-align: center;
+  } 
+
+  .tac-l {
+    text-align: left;
+  }
+
+  .t-0 {
+    top: 0
+  }
+
+  .z-1 {
+    z-index: 1;
+  }
+
+  .font-family-niconne {
+    font-family: Niconne-Regular;
+  }
+
+  .inline-block {
+    display: inline-block;
+  }

@@ -22,14 +22,15 @@ import ColorSetting from './components/ColorSetting.vue'
   height: 100%;
   width: 100%;
   .nav {
+    
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    height: 100%;
-    width: 300px;
-    overflow: auto;
-    transition: .8s;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        height: 100%;
+        width: 300px;
+        overflow: auto;
+        transition: .8s;
   }
   .layout {
     width: calc(100% - 300px);
@@ -37,6 +38,19 @@ import ColorSetting from './components/ColorSetting.vue'
     position: absolute;
     top: 0;
     left: 300px;
+  }
+  @media (max-width: 960px) {
+      .nav {
+        display: none;
+      }
+      .layout {
+        width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+        
+      }
   }
 }
 </style>

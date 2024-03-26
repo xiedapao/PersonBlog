@@ -19,7 +19,9 @@ export default defineComponent({
   mounted() {
   },
   methods: {
-    
+    scrollToSection() {
+      this.$refs.selfIntroduce.scrollIntoView({ behavior: 'smooth' });
+    }
   },
   setup(props, context) {
     const userStore = useUserStore();
@@ -77,11 +79,269 @@ export default defineComponent({
       {
           text: "拥有良好的代码编程习惯，较强的学习能力和解决问题的能力，能保证项目在周期内完成的同时也兼顾了质量。"
       },
+    ];
+    const toolInfo = [
+      {
+        image: "src/assets/static/tools/fe-React.png",
+        text: "React",
+        url: "http://reactjs.org/"
+      },
+      {
+        image: "src/assets/static/tools/fe-JavaScript.png",
+        text: "JavaScript",
+        url: "http://developer.mozilla.org/zh-CN/docs/Web/JavaScript/"
+      },
+      {
+        image: "src/assets/static/tools/fe-TypeScript.png",
+        text: "TypeScript",
+        url: "http://typescriptlang.org/"
+      },
+      {
+        image: "src/assets/static/tools/fe-Redux.png",
+        text: "Redux",
+        url: "http://redux.js.org/"
+      },
+      {
+        image: "src/assets/static/tools/fe-Vue.png",
+        text: "Vue&Vuex",
+        url: "http://cn.vuejs.org/"
+      },
+      {
+        image: "src/assets/static/tools/fe-EcmaScript.png",
+        text: "es6",
+        url: "http://es6.ruanyifeng.com/"
+      },
+      {
+        image: "src/assets/static/tools/fe-NodeJs.png",
+        text: "NodeJs",
+        url: "http://nodejs.org/"
+      },
+      {
+        image: "src/assets/static/tools/fe-Jquery.png",
+        text: "Jquery",
+        url: "http://jquery.com/"
+      },
+      {
+        image: "src/assets/static/tools/fe-Sass.png",
+        text: "Sass",
+        url: "http://sass-lang.com/"
+      },
+      {
+        image: "src/assets/static/tools/fe-Less.png",
+        text: "Less",
+        url: "http://lesscss.org/"
+      },
+      {
+        image: "src/assets/static/tools/fe-Json.png",
+        text: "Json",
+        url: "http://www.json.org//"
+      },
+      {
+        image: "src/assets/static/tools/fe-Html5.png",
+        text: "Html5",
+        url: "http://developer.mozilla.org/zh-CN/docs/Web/HTML/"
+      },
+      {
+        image: "src/assets/static/tools/fe-Css3.png",
+        text: "CSS3",
+        url: "http://developer.mozilla.org/zh-CN/docs/Web/CSS/"
+      },
+      {
+        image: "src/assets/static/tools/fe-AntDesign.png",
+        text: "AntDesign",
+        url: "http://ant.design/"
+      },
+      {
+        image: "src/assets/static/tools/fe-Element.png",
+        text: "Element",
+        url: "http://element.eleme.cn/"
+      },
+      {
+        image: "src/assets/static/tools/fe-BootStrap.png",
+        text: "BootStrap",
+        url: "http://getbootstrap.com/"
+      },
+    ];
+    const devOpsInfo = [
+      {
+        image: "src/assets/static/tools/tool-WebPack.png",
+        text: "Webpack",
+        url: "http://webpack.js.org/"
+      },
+      {
+        image: "src/assets/static/tools/tool-Gulp.png",
+        text: "Gulp",
+        url: "http://gulpjs.com/"
+      },
+      {
+        image: "src/assets/static/tools/tool-Babel.png",
+        text: "Babel",
+        url: "http://babeljs.io/"
+      },
+      {
+        image: "src/assets/static/tools/tool-Yarn.png",
+        text: "Yarn",
+        url: "http://yarnpkg.com/"
+      },
+      {
+        image: "src/assets/static/tools/tool-pnpm.png",
+        text: "Pnpm",
+        url: "https://www.pnpm.cn/"
+      },
+      {
+        image: "src/assets/static/tools/tool-Npm.png",
+        text: "Npm",
+        url: "http://www.npmjs.com/"
+      },
+      {
+        image: "src/assets/static/tools/tool-Docker.png",
+        text: "Docker",
+        url: "http://www.docker.com/"
+      },
+      {
+        image: "src/assets/static/tools/tool-Git.png",
+        text: "Git",
+        url: "http://git-scm.com/"
+      },
+      {
+        image: "src/assets/static/tools/tool-vite.png",
+        text: "Vite",
+        url: "https://cn.vitejs.dev/"
+      },
+    ];
+    const UtilityInfo = [
+      {
+        image: "src/assets/static/tools/tool-Postman.png",
+        text: "Postman",
+        url: "http://www.getpostman.com/"
+      },
+      {
+        image: "src/assets/static/tools/tool-Charles.png",
+        text: "Charles",
+        url: "http://www.charlesproxy.com/"
+      },
+      {
+        image: "src/assets/static/tools/tool-StackOverflow.png",
+        text: "Stack Overflow",
+        url: "http://stackoverflow.com/"
+      },
+      {
+        image: "src/assets/static/tools/tool-GithubPages.png",
+        text: "Github",
+        url: "http://pages.github.com/"
+      },
+      {
+        image: "src/assets/static/tools/tool-Vscode.png",
+        text: "Visual Studio Code",
+        url: "http://code.visualstudio.com/"
+      },
+      {
+        image: "src/assets/static/tools/tool-Navicat.png",
+        text: "Navicat",
+        url: "http://www.navicat.com/"
+      },
+      {
+        image: "src/assets/static/tools/tool-Markdown.png",
+        text: "Markdown",
+        url: "http://wowubuntu.com/markdown/"
+      },
+      {
+        image: "src/assets/static/tools/tool-PhotoShop.png",
+        text: "PhotoShop",
+        url: "http://www.adobe.com/"
+      },
+      {
+        image: "src/assets/static/tools/tool-Wappalyzer.png",
+        text: "Wappalyzer",
+        url: "https://www.wappalyzer.com/alerts/"
+      },
+      {
+        image: "src/assets/static/tools/tool-peo.png",
+        text: "Peo-Chat",
+        url: "https://poe.com/"
+      },
+    ];
+    const interestInfo = [
+      {
+        icon: "read",
+        word: "阅读",
+      },
+      {
+        icon: "code",
+        word: "代码",
+      },
+      {
+        icon: "basketball",
+        word: "篮球",
+      },
+      {
+        icon: "friend",
+        word: "交友",
+      },
+      {
+        icon: "movie",
+        word: "电影"
+      },
+    ];
+    const honorInfo = [
+      {
+        id: "1",
+        time: "2023-09",
+        text: "CISAW信息安全保障人员认证证书"
+      }
+    ];
+    const workExperice = [
+      {
+        time: "2018-09",
+        company: "广州市品高软件股份有限公司",
+        job: "web前端工程师",
+        img: "src/assets/static/experice/pingao.png",
+        workDescribe: [
+          "1.基于React+TypeScript+Antd构建项目，开发云服务管理系统，适配各浏览器。",
+          "2.负责云服务申请、配置等流程各环节页面、与服务管理主流程相关功能的开发。",
+          "3.分析业务需求，同团队相互沟通，合作开发，同时给产品交互体验提出合适的建议。",
+          "4.推动在项目中进行模块化开发，降低业务代码复杂度，提高开发效率。解决实际业务场景问题和日常Bug。",
+          "5.参与项目顺利上线并使用，及时处理客户提出的功能需求和问题"
+        ],
+        projects: "dev-ops云平台"
+      },
+      {
+        time: "2019-09",
+        company: "长沙蜜獾信息科技有限公司",
+        job: "web前端工程师",
+        img: "src/assets/static/experice/mihuan.png",
+        workDescribe: [
+          "1.基于Jquery+vue2+Bootstrap构建加拿大皇家银行业务流程页面。",
+          "2.负责贷款、还款、信用卡等业务环节主流程相关功能的开发。",
+          "3.同设计师，后端合作，高质量的完成页面的实现工作，利用前沿技术提高编码效率，缩短项目的开发周期。",
+          "4.搭建技术框架，使用Git进行版本控制和迭代，前后分离架构，组件化来提高复用和可维护性。"
+        ],
+        projects: "加拿大皇家银行RBC项目"
+      },
+      {
+        time: "2020-03",
+        company: "北京数字政通科技股份有限公司",
+        job: "web前端工程师",
+        img: "src/assets/static/experice/egova.png",
+        workDescribe: [
+          "1.参与智慧城市大脑、智信H5、悟空低代码平台等项目开发。",
+          "2.开发多种智信H5插件，适配微信、钉钉、专有钉等环境。",
+          "3.高质量编码还原Ui设计的界面，同后端合作实现数据的交互，功能上的优化。",
+          "4.参与悟空低代码平台开发，悟空组件开发，参与的项目已顺利交付多个城市地区"
+        ],
+        projects: "智慧城市大脑、智信H5、悟空低代码平台"
+      },
     ]
     return {
       wordArr,
       meInfo,
-      introduceInfo
+      introduceInfo,
+      toolInfo,
+      devOpsInfo,
+      UtilityInfo,
+      interestInfo,
+      honorInfo,
+      workExperice
     };
   },
 });
@@ -101,10 +361,10 @@ export default defineComponent({
               </div>
             </div>
             <div class="banner-background pos-ab t-0 all-percent-h-w"></div>
-            <button class="btn-down pos-re z-1"><span></span></button>
+            <button @click="scrollToSection" class="btn-down pos-re z-1"><span></span></button>
           </div>
         </header>
-        <section class="pos-re" style="top: 730px;margin-bottom: -12px; padding-bottom: 12px; background: rgb(21, 29, 38);">
+        <section ref="selfIntroduce" id="selfIntroduce" class="pos-re" style="top: 730px;margin-bottom: -12px; padding-bottom: 12px; background: rgb(21, 29, 38);">
           <div class="jsx-4071316007 tac">
             <h1 class="jsx-4071316007 color-white pos-re font-weight-small inline-block">谢宇航－WEB前端</h1>
             <h2 class="jsx-4071316007 color-white font-weight-small font-family-niconne font-size-xl">Xieyuhang WEB front-end</h2>
@@ -116,7 +376,7 @@ export default defineComponent({
             <ul class="row-content color-white">
               <li class="row">
                 <el-row :gutter="5" justify="space-between">
-                  <el-col class="row-item" v-for="(item,index) in meInfo" :key="item.icon" :xs="24" :sm="12" :md="8" :lg="8" :xl="1">
+                  <el-col class="row-item" v-for="(item,index) in meInfo" :key="item.icon" :xs="24" :sm="12" :md="8" :lg="8" :xl="8">
                     <i-ep-UserFilled class="vam" v-if="index === 0"/>
                     <i-ep-Briefcase class="vam" v-if="index === 1"/>
                     <svg class="vam font-size-md" v-if="index === 2" viewBox="0 0 1280 1024" width="1.2em" height="1.2em"><defs></defs>
@@ -138,6 +398,116 @@ export default defineComponent({
                 <p class="tac-l" v-for="(item,index) in introduceInfo" :key="item.icon"><i-ep-SuccessFilled class="vam" /><span class="vam m-l-sm">{{item.text}}</span></p>
               </li>
             </ul>
+            <h3 class="global-font-color r-m-p tac-l">
+              <i-ep-Tools class="vam"/><span class="vam m-l-sm">技术栈&工具</span>
+            </h3>
+            <ul class="tool-content color-white">
+              <li>
+                <h3 class="font-weight-normal r-m-p">Application and Data</h3>
+                <div class="row tac">
+                  <el-row :gutter="5" justify="start">
+                    <el-col class="tools-content-item" v-for="(item,index) in toolInfo" :key="item.text" :xs="12" :sm="8" :md="6" :lg="4" :xl="4">
+                        <a :href="item.url" target="_blank" style="display:block">
+                          <img :src="item.image" class="bg-color-white bdr-small" :alt="item.text">
+                          <h4 class=" ellipsis font-weight-normal r-m-p">{{item.text}}</h4>
+                        </a>
+                    </el-col>
+                  </el-row>
+                </div>
+              </li>
+            </ul>
+            <ul class="tool-content color-white">
+              <li>
+                <h3 class="font-weight-normal r-m-p">DevOps</h3>
+                <div class="row tac">
+                  <el-row :gutter="5" justify="start">
+                    <el-col class="tools-content-item" v-for="(item,index) in devOpsInfo" :key="item.text" :xs="12" :sm="8" :md="6" :lg="4" :xl="4">
+                        <a :href="item.url" target="_blank" style="display:block">
+                          <img :src="item.image" class="bg-color-white bdr-small" :alt="item.text">
+                          <h4 class=" ellipsis font-weight-normal r-m-p">{{item.text}}</h4>
+                        </a>
+                    </el-col>
+                  </el-row>
+                </div>
+              </li>
+            </ul>
+            <ul class="tool-content color-white">
+              <li>
+                <h3 class="font-weight-normal r-m-p">Utilities</h3>
+                <div class="row tac">
+                  <el-row :gutter="5" justify="start">
+                    <el-col class="tools-content-item" v-for="(item,index) in UtilityInfo" :key="item.text" :xs="12" :sm="8" :md="6" :lg="4" :xl="4">
+                        <a :href="item.url" target="_blank" style="display:block">
+                          <img :src="item.image" class="bg-color-white bdr-small" :alt="item.text">
+                          <h4 class=" ellipsis font-weight-normal r-m-p">{{item.text}}</h4>
+                        </a>
+                    </el-col>
+                  </el-row>
+                </div>
+              </li>
+            </ul>
+            <h3 class="global-font-color r-m-p tac-l">
+              <i-ep-Share class="vam"/><span class="vam m-l-sm">兴趣爱好</span>
+            </h3>
+            <ul class="row-content color-white">
+              <li class="row">
+                <el-row :gutter="4" justify="space-between" style="width: 100%">
+                  <el-col class="row-item" v-for="(item,index) in interestInfo" :key="item.icon" :xs="24" :sm="12" :md="4" :lg="4" :xl="2">
+                    <i-ep-Notebook class="vam" v-if="index === 0"/>
+                    <i-ep-SetUp class="vam" v-if="index === 1"/>
+                    <i-ep-Basketball class="vam" v-if="index === 2"/>
+                    <i-ep-Avatar class="vam" v-if="index === 3"/>
+                    <i-ep-Film class="vam" v-if="index === 4"/>
+                    <span class="vam m-l-sm">{{item.word}}</span>
+                  </el-col>
+                </el-row>
+              </li>
+            </ul>
+            <h3 class="global-font-color r-m-p tac-l">
+              <i-ep-TrophyBase class="vam"/><span class="vam m-l-sm">荣誉证书</span>
+            </h3>
+            <ul class="row-content color-white">
+              <li class="row" style="margin-bottom: 2%">
+                <p class="tac-l" v-for="(item,index) in honorInfo" :key="item.id"><i-ep-Calendar class="vam" /><span class="vam m-l-sm">{{item.time}}</span><span class="vam m-l-sm">{{item.text}}</span></p>
+              </li>
+            </ul>
+            <h3 class="global-font-color r-m-p tac-l">
+              <i-ep-TrophyBase class="vam"/><span class="vam m-l-sm">工作经历</span>
+            </h3>
+            <ul class="row-content color-white work-exprerice">
+              <li v-for="(item,index) in workExperice" :key="item.time">
+                <div>
+                  <a target="_blank" class="logo inline-block pos-re">
+                    <img class="all-percent-h-w" :src="item.img" :alt="item.company" :title="item.company" />
+                    <div class="tipso pos-abs tac color-white bg-color-primary">
+                      <div class="pos-re font-family-georgia font-size-md">
+                        {{item.time}}
+                      </div>
+                    </div>
+                  </a>
+                  <div class="content">
+                    <h3 class="m-t-b-md">
+                      <a class="global-font-color" target="_blank">
+                        <i-ep-OfficeBuilding class="vam"/>
+                        <span class="vam m-l-xs weight-700 Helvetica-Neue">{{item.company}}</span>
+                      </a>
+                    </h3>
+                    <h4 class="r-m-p m-t-b-md">
+                      <i-ep-Avatar class="vam"/>
+                      <span class="vam m-l-sm Helvetica-Neue">WEB前端工程师</span>
+                    </h4>
+                    <h4 class="global-font-color r-m-p m-t-b-md">工作描述：</h4>
+                    <p>
+                      <span v-for="(text,index) in item.workDescribe"  :key="index">{{text}}<br></span>
+                    </p>
+                    <h4 class="global-font-color r-m-p m-t-b-md">相关项目：</h4>
+                    <p style="marginBottom: 0">
+                      <span>{{item.projects}}<br></span>
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </section>
         
@@ -146,9 +516,13 @@ export default defineComponent({
 
 <style lang="less" scoped>
 .me {
+  font-family: Helvetica-Neue;
   .me-header {
     width: calc(100% - 300px);
     position: fixed;
+    @media (max-width: 960px) {
+      width: 100%;
+    }
     .banner {
       display: table;
       .banner-content {
@@ -248,10 +622,12 @@ export default defineComponent({
   .layout-container {
     width: 80%;
     margin: auto;
-
+    >ul {
+      list-style-type: none;
+    }
     .row-content {
       margin-left: 25px;
-      list-style-type: none;
+      
       .row {
           display: flex;
           -ms-flex-wrap: wrap;
@@ -267,8 +643,98 @@ export default defineComponent({
           }
       }
     }
+    .tool-content {
+      margin-left: 10px;
+      >li {
+          padding: 0 10px 10px;
+          border: 1px solid var(--color-white);
+          margin-bottom: 10px;
+          border-radius: 10px;
+          text-align: left;
+          &>h3 {
+              padding: 0 2%;
+              display: inline-block;
+              background-color: var(--theme-color);
+              color: #fff;
+          }
+          .tools-content-item {
+            margin-top: 2%;
+            &>a>img {
+              width: 70%;
+            }
+          }
+      }
+    }
   }
 
+  .work-exprerice {
+    &>li {
+      width: 100%;
+      border-left: 5px solid var(--color-light-gray);
+      padding: 0 0 20px 15px;
+      &>div {
+          width: 100%;
+      }
+      .logo {
+        width: 150px;
+        height: 80px;
+        background: #fff;
+      }
+      .content{
+        width: 100%;
+        text-align: left;
+      }
+    }
+      @media (min-width: 960px) {
+        border-left: none;
+        padding-left: 0;
+        &>li::after {
+          display: block;
+          content: "";
+          clear: both;
+        }
+        &>li:nth-child(odd) {
+          margin-left: -10px;
+          border-left: none;
+          .logo{
+              margin-left: -80px;
+              float: left;
+          }
+          &>div {
+              width: 50%;
+              float: right;
+              border-left: 5px solid var(--color-light-gray);
+          }
+          .content {
+            width: 70%;
+            padding-left: 5%;
+            float: right;
+          }
+        }
+        &> li:nth-child(2n) {
+          margin-left: -10px;
+          border-left: none;
+          .logo{
+              margin-right: -80px;
+              float: right;
+          }
+          &>div {
+            width: 50%;
+            float: left;
+            border-right: 5px solid var(--color-light-gray);
+          }
+          .content {
+              float: right;
+              text-align: right;
+              width: 70%;
+              padding-right: 5%;
+          }
+        }
+      }
+  }
+  
+  
+  
 
   @keyframes home_ani-u148crt__EHaeA {
     0% {

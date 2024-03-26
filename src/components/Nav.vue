@@ -199,7 +199,7 @@ export default defineComponent({
     padding-left: 0;
     >li {
       width: 100%;
-      color: var(--color-default-gray);
+      color: var(--color-light-gray);
       cursor: pointer;
       .a-tag {
         width: 100%;

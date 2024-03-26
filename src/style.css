@@ -13,7 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   --theme-color: #128f45;
-  --global-background-color: rgb(197, 220, 220);
+  --global-background-color: #151D26;
   --global-background-image: none;
   --font-default-gray: #aaa;
   --color-light-gray: #f9f9f9;
@@ -29,11 +29,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #fff;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--theme-color);
 }
 
 body {
@@ -60,12 +60,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+button:focus {
+  outline: none;
+}
 button:hover {
   border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 .card {
@@ -86,7 +85,7 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: var(--theme-color);
   }
   button {
     background-color: #f9f9f9;

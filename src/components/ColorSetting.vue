@@ -76,7 +76,7 @@ export default defineComponent({
     let activeIndex2 = ref(2);
     let colorActive = ref("#128f45");
     let showMenu = ref(false);
-    const backgroundList = reactive([
+    const backgroundList: Array<any> = reactive([
       {
         id: 1,
         background: "#c5dcdc",

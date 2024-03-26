@@ -135,7 +135,7 @@ export default defineComponent({
                 </el-row>
               </li>
               <li class="row" style="margin-bottom: 2%">
-                <p class="tac-l" v-for="(item,index) in introduceInfo" :key="item.icon"><i-ep-SuccessFilled class="vam" /><span class="vam m-l-sm">{{item.text}}</span></p>
+                <p class="tac-l" v-for="(item,index) in introduceInfo" :key="index"><i-ep-SuccessFilled class="vam" /><span class="vam m-l-sm">{{item.text}}</span></p>
               </li>
             </ul>
           </div>

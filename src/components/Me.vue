@@ -26,7 +26,7 @@ export default defineComponent({
   setup(props, context) {
     const userStore = useUserStore();
     let wordArr = reactive(['欢','迎','来','到','我','的','个','人','主','页','！']);
-    const meInfo = [
+    const meInfo: Array<any> = [
       {
         icon: "UserFilled",
         word: "男/28岁/(1995.05)",
@@ -54,7 +54,7 @@ export default defineComponent({
         url: "https://ryrzcisaw.isccc.gov.cn/Home/Login?ReturnURL=/Home/Default/"
       },
     ];
-    const introduceInfo = [
+    const introduceInfo: Array<any> = [
       {
           text: "具有PC端、移动端、h5、前后端分离及微信公众号、小程序的开发经验。了解webGL，具有对接地图开发经验，开源社交分享组件、后台管理设计方案至GitHub。熟练使 用HTML、CSS、JavaScript构建高性能的Web应用程序。"
       },
@@ -80,7 +80,7 @@ export default defineComponent({
           text: "拥有良好的代码编程习惯，较强的学习能力和解决问题的能力，能保证项目在周期内完成的同时也兼顾了质量。"
       },
     ];
-    const toolInfo = [
+    const toolInfo: Array<any> = [
       {
         image: "src/assets/static/tools/fe-React.png",
         text: "React",
@@ -162,7 +162,7 @@ export default defineComponent({
         url: "http://getbootstrap.com/"
       },
     ];
-    const devOpsInfo = [
+    const devOpsInfo: Array<any> = [
       {
         image: "src/assets/static/tools/tool-WebPack.png",
         text: "Webpack",
@@ -209,7 +209,7 @@ export default defineComponent({
         url: "https://cn.vitejs.dev/"
       },
     ];
-    const UtilityInfo = [
+    const UtilityInfo: Array<any> = [
       {
         image: "src/assets/static/tools/tool-Postman.png",
         text: "Postman",
@@ -261,7 +261,7 @@ export default defineComponent({
         url: "https://poe.com/"
       },
     ];
-    const interestInfo = [
+    const interestInfo: Array<any> = [
       {
         icon: "read",
         word: "阅读",
@@ -283,14 +283,14 @@ export default defineComponent({
         word: "电影"
       },
     ];
-    const honorInfo = [
+    const honorInfo: Array<any> = [
       {
         id: "1",
         time: "2023-09",
         text: "CISAW信息安全保障人员认证证书"
       }
     ];
-    const workExperice = [
+    const workExperice: Array<any> = [
       {
         time: "2018-09",
         company: "广州市品高软件股份有限公司",
@@ -395,7 +395,7 @@ export default defineComponent({
                 </el-row>
               </li>
               <li class="row" style="margin-bottom: 2%">
-                <p class="tac-l" v-for="(item,index) in introduceInfo" :key="item.icon"><i-ep-SuccessFilled class="vam" /><span class="vam m-l-sm">{{item.text}}</span></p>
+                <p class="tac-l" v-for="(item,index) in introduceInfo" :key="index"><i-ep-SuccessFilled class="vam" /><span class="vam m-l-sm">{{item.text}}</span></p>
               </li>
             </ul>
             <h3 class="global-font-color r-m-p tac-l">

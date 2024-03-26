@@ -29,7 +29,7 @@ defineComponent({
 
 <template>
   <h1>jdafifdsaofjdiosajfoidsjaiofjdasio</h1>
-  <div @click="down">11</div>
+  <div>11</div>
 </template>
 
 <style scoped>

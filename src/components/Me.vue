@@ -5,6 +5,10 @@ import {
   ref
 } from "vue";
 import  useUserStore  from '@/store'
+const getImageUrl = (name: String) => {
+  console.log(new URL(`${name}`, import.meta.url))
+    return new URL(`${name}`, import.meta.url).href
+}
 export default defineComponent({
   name: "Me",
   components: {
@@ -21,7 +25,8 @@ export default defineComponent({
   methods: {
     scrollToSection() {
       this.$refs.selfIntroduce.scrollIntoView({ behavior: 'smooth' });
-    }
+    },
+
   },
   setup(props, context) {
     const userStore = useUserStore();
@@ -82,181 +87,181 @@ export default defineComponent({
     ];
     const toolInfo: Array<any> = [
       {
-        image: "src/assets/static/tools/fe-React.png",
+        image: "/img/tools/fe-React.png",
         text: "React",
         url: "http://reactjs.org/"
       },
       {
-        image: "src/assets/static/tools/fe-JavaScript.png",
+        image: "/img/tools/fe-JavaScript.png",
         text: "JavaScript",
         url: "http://developer.mozilla.org/zh-CN/docs/Web/JavaScript/"
       },
       {
-        image: "src/assets/static/tools/fe-TypeScript.png",
+        image: "/img/tools/fe-TypeScript.png",
         text: "TypeScript",
         url: "http://typescriptlang.org/"
       },
       {
-        image: "src/assets/static/tools/fe-Redux.png",
+        image: "/img/tools/fe-Redux.png",
         text: "Redux",
         url: "http://redux.js.org/"
       },
       {
-        image: "src/assets/static/tools/fe-Vue.png",
+        image: "/img/tools/fe-Vue.png",
         text: "Vue&Vuex",
         url: "http://cn.vuejs.org/"
       },
       {
-        image: "src/assets/static/tools/fe-EcmaScript.png",
+        image: "/img/tools/fe-EcmaScript.png",
         text: "es6",
         url: "http://es6.ruanyifeng.com/"
       },
       {
-        image: "src/assets/static/tools/fe-NodeJs.png",
+        image: "/img/tools/fe-NodeJs.png",
         text: "NodeJs",
         url: "http://nodejs.org/"
       },
       {
-        image: "src/assets/static/tools/fe-Jquery.png",
+        image: "/img/tools/fe-Jquery.png",
         text: "Jquery",
         url: "http://jquery.com/"
       },
       {
-        image: "src/assets/static/tools/fe-Sass.png",
+        image: "/img/tools/fe-Sass.png",
         text: "Sass",
         url: "http://sass-lang.com/"
       },
       {
-        image: "src/assets/static/tools/fe-Less.png",
+        image: "/img/tools/fe-Less.png",
         text: "Less",
         url: "http://lesscss.org/"
       },
       {
-        image: "src/assets/static/tools/fe-Json.png",
+        image: "/img/tools/fe-Json.png",
         text: "Json",
         url: "http://www.json.org//"
       },
       {
-        image: "src/assets/static/tools/fe-Html5.png",
+        image: "/img/tools/fe-Html5.png",
         text: "Html5",
         url: "http://developer.mozilla.org/zh-CN/docs/Web/HTML/"
       },
       {
-        image: "src/assets/static/tools/fe-Css3.png",
+        image: "/img/tools/fe-Css3.png",
         text: "CSS3",
         url: "http://developer.mozilla.org/zh-CN/docs/Web/CSS/"
       },
       {
-        image: "src/assets/static/tools/fe-AntDesign.png",
+        image: "/img/tools/fe-AntDesign.png",
         text: "AntDesign",
         url: "http://ant.design/"
       },
       {
-        image: "src/assets/static/tools/fe-Element.png",
+        image: "/img/tools/fe-Element.png",
         text: "Element",
         url: "http://element.eleme.cn/"
       },
       {
-        image: "src/assets/static/tools/fe-BootStrap.png",
+        image: "/img/tools/fe-BootStrap.png",
         text: "BootStrap",
         url: "http://getbootstrap.com/"
       },
     ];
     const devOpsInfo: Array<any> = [
       {
-        image: "src/assets/static/tools/tool-WebPack.png",
+        image: "/img/tools/tool-WebPack.png",
         text: "Webpack",
         url: "http://webpack.js.org/"
       },
       {
-        image: "src/assets/static/tools/tool-Gulp.png",
+        image: "/img/tools/tool-Gulp.png",
         text: "Gulp",
         url: "http://gulpjs.com/"
       },
       {
-        image: "src/assets/static/tools/tool-Babel.png",
+        image: "/img/tools/tool-Babel.png",
         text: "Babel",
         url: "http://babeljs.io/"
       },
       {
-        image: "src/assets/static/tools/tool-Yarn.png",
+        image: "/img/tools/tool-Yarn.png",
         text: "Yarn",
         url: "http://yarnpkg.com/"
       },
       {
-        image: "src/assets/static/tools/tool-pnpm.png",
+        image: "/img/tools/tool-pnpm.png",
         text: "Pnpm",
         url: "https://www.pnpm.cn/"
       },
       {
-        image: "src/assets/static/tools/tool-Npm.png",
+        image: "/img/tools/tool-Npm.png",
         text: "Npm",
         url: "http://www.npmjs.com/"
       },
       {
-        image: "src/assets/static/tools/tool-Docker.png",
+        image: "/img/tools/tool-Docker.png",
         text: "Docker",
         url: "http://www.docker.com/"
       },
       {
-        image: "src/assets/static/tools/tool-Git.png",
+        image: "/img/tools/tool-Git.png",
         text: "Git",
         url: "http://git-scm.com/"
       },
       {
-        image: "src/assets/static/tools/tool-vite.png",
+        image: "/img/tools/tool-vite.png",
         text: "Vite",
         url: "https://cn.vitejs.dev/"
       },
     ];
     const UtilityInfo: Array<any> = [
       {
-        image: "src/assets/static/tools/tool-Postman.png",
+        image: "/img/tools/tool-Postman.png",
         text: "Postman",
         url: "http://www.getpostman.com/"
       },
       {
-        image: "src/assets/static/tools/tool-Charles.png",
+        image: "/img/tools/tool-Charles.png",
         text: "Charles",
         url: "http://www.charlesproxy.com/"
       },
       {
-        image: "src/assets/static/tools/tool-StackOverflow.png",
+        image: "/img/tools/tool-StackOverflow.png",
         text: "Stack Overflow",
         url: "http://stackoverflow.com/"
       },
       {
-        image: "src/assets/static/tools/tool-GithubPages.png",
+        image: "/img/tools/tool-GithubPages.png",
         text: "Github",
         url: "http://pages.github.com/"
       },
       {
-        image: "src/assets/static/tools/tool-Vscode.png",
+        image: "/img/tools/tool-Vscode.png",
         text: "Visual Studio Code",
         url: "http://code.visualstudio.com/"
       },
       {
-        image: "src/assets/static/tools/tool-Navicat.png",
+        image: "/img/tools/tool-Navicat.png",
         text: "Navicat",
         url: "http://www.navicat.com/"
       },
       {
-        image: "src/assets/static/tools/tool-Markdown.png",
+        image: "/img/tools/tool-Markdown.png",
         text: "Markdown",
         url: "http://wowubuntu.com/markdown/"
       },
       {
-        image: "src/assets/static/tools/tool-PhotoShop.png",
+        image: "/img/tools/tool-PhotoShop.png",
         text: "PhotoShop",
         url: "http://www.adobe.com/"
       },
       {
-        image: "src/assets/static/tools/tool-Wappalyzer.png",
+        image: "/img/tools/tool-Wappalyzer.png",
         text: "Wappalyzer",
         url: "https://www.wappalyzer.com/alerts/"
       },
       {
-        image: "src/assets/static/tools/tool-peo.png",
+        image: "/img/tools/tool-peo.png",
         text: "Peo-Chat",
         url: "https://poe.com/"
       },
@@ -283,6 +288,18 @@ export default defineComponent({
         word: "电影"
       },
     ];
+    const blogInfo: Array<any> = [
+      {
+        icon: "csdn",
+        word: "csdn",
+        url: "https://blog.csdn.net/wogieni?type=blog"
+      },
+      {
+        icon: "juejin",
+        word: "掘金",
+        url: "https://juejin.cn/user/3729191719938845/posts"
+      },
+    ];
     const honorInfo: Array<any> = [
       {
         id: "1",
@@ -295,7 +312,7 @@ export default defineComponent({
         time: "2018-09",
         company: "广州市品高软件股份有限公司",
         job: "web前端工程师",
-        img: "src/assets/static/experice/pingao.png",
+        img: "/img/experice/pingao.png",
         workDescribe: [
           "1.基于React+TypeScript+Antd构建项目，开发云服务管理系统，适配各浏览器。",
           "2.负责云服务申请、配置等流程各环节页面、与服务管理主流程相关功能的开发。",
@@ -309,7 +326,7 @@ export default defineComponent({
         time: "2019-09",
         company: "长沙蜜獾信息科技有限公司",
         job: "web前端工程师",
-        img: "src/assets/static/experice/mihuan.png",
+        img: "/img/experice/mihuan.png",
         workDescribe: [
           "1.基于Jquery+vue2+Bootstrap构建加拿大皇家银行业务流程页面。",
           "2.负责贷款、还款、信用卡等业务环节主流程相关功能的开发。",
@@ -322,7 +339,7 @@ export default defineComponent({
         time: "2020-03",
         company: "北京数字政通科技股份有限公司",
         job: "web前端工程师",
-        img: "src/assets/static/experice/egova.png",
+        img: "/img/experice/egova.png",
         workDescribe: [
           "1.参与智慧城市大脑、智信H5、悟空低代码平台等项目开发。",
           "2.开发多种智信H5插件，适配微信、钉钉、专有钉等环境。",
@@ -332,6 +349,7 @@ export default defineComponent({
         projects: "智慧城市大脑、智信H5、悟空低代码平台"
       },
     ]
+    
     return {
       wordArr,
       meInfo,
@@ -341,7 +359,8 @@ export default defineComponent({
       UtilityInfo,
       interestInfo,
       honorInfo,
-      workExperice
+      workExperice,
+      blogInfo
     };
   },
 });
@@ -352,7 +371,7 @@ export default defineComponent({
 <template>
     <div class="me" >
         <header style="height: 730px;" class="me-header">
-          <div class="pos-re tac all-percent-h-w">
+          <div class="pos-re tac all-percent-h-w" style="background: rgb(21, 29, 38);">
             <div class="banner pos-re z-1 all-percent-h-w">
               <div class="banner-content color-white">
                 <h2 class="font-weight-normal">
@@ -408,7 +427,7 @@ export default defineComponent({
                   <el-row :gutter="5" justify="start">
                     <el-col class="tools-content-item" v-for="(item,index) in toolInfo" :key="item.text" :xs="12" :sm="8" :md="6" :lg="4" :xl="4">
                         <a :href="item.url" target="_blank" style="display:block">
-                          <img :src="item.image" class="bg-color-white bdr-small" :alt="item.text">
+                          <img v-lazy="item.image" class="bg-color-white bdr-small" :alt="item.text">
                           <h4 class=" ellipsis font-weight-normal r-m-p">{{item.text}}</h4>
                         </a>
                     </el-col>
@@ -423,7 +442,7 @@ export default defineComponent({
                   <el-row :gutter="5" justify="start">
                     <el-col class="tools-content-item" v-for="(item,index) in devOpsInfo" :key="item.text" :xs="12" :sm="8" :md="6" :lg="4" :xl="4">
                         <a :href="item.url" target="_blank" style="display:block">
-                          <img :src="item.image" class="bg-color-white bdr-small" :alt="item.text">
+                          <img v-lazy="item.image" class="bg-color-white bdr-small" :alt="item.text">
                           <h4 class=" ellipsis font-weight-normal r-m-p">{{item.text}}</h4>
                         </a>
                     </el-col>
@@ -438,7 +457,7 @@ export default defineComponent({
                   <el-row :gutter="5" justify="start">
                     <el-col class="tools-content-item" v-for="(item,index) in UtilityInfo" :key="item.text" :xs="12" :sm="8" :md="6" :lg="4" :xl="4">
                         <a :href="item.url" target="_blank" style="display:block">
-                          <img :src="item.image" class="bg-color-white bdr-small" :alt="item.text">
+                          <img v-lazy="item.image" class="bg-color-white bdr-small" :alt="item.text">
                           <h4 class=" ellipsis font-weight-normal r-m-p">{{item.text}}</h4>
                         </a>
                     </el-col>
@@ -464,6 +483,19 @@ export default defineComponent({
               </li>
             </ul>
             <h3 class="global-font-color r-m-p tac-l">
+              <i-ep-Share class="vam"/><span class="vam m-l-sm">博客</span>
+            </h3>
+            <ul class="row-content color-white">
+              <li class="row">
+                <el-row :gutter="4" justify="space-between" style="width: 100%">
+                  <el-col class="row-item" v-for="(item) in blogInfo" :key="item.icon" :xs="24" :sm="12" :md="4" :lg="4" :xl="2">
+                    <i-ep-Notebook class="vam"/>
+                    <a :href="item.url" target="_blank" class="vam m-l-sm color-white">{{item.word}}</a>
+                  </el-col>
+                </el-row>
+              </li>
+            </ul>
+            <h3 class="global-font-color r-m-p tac-l">
               <i-ep-TrophyBase class="vam"/><span class="vam m-l-sm">荣誉证书</span>
             </h3>
             <ul class="row-content color-white">
@@ -478,7 +510,7 @@ export default defineComponent({
               <li v-for="(item,index) in workExperice" :key="item.time">
                 <div>
                   <a target="_blank" class="logo inline-block pos-re">
-                    <img class="all-percent-h-w" :src="item.img" :alt="item.company" :title="item.company" />
+                    <img class="all-percent-h-w" v-lazy="item.img" :alt="item.company" :title="item.company" />
                     <div class="tipso pos-abs tac color-white bg-color-primary">
                       <div class="pos-re font-family-georgia font-size-md">
                         {{item.time}}
@@ -593,11 +625,18 @@ export default defineComponent({
   }
   .banner-background {
     animation: me_background_anima 20s linear infinite;
-    background-color: var(--color-primary);
+    -webkit-animation: me_background_anima_safiri 20s linear infinite;
+    background-color: transparent;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
     background-image: url("../assets/static/bg-1.png");
+    transition-property: transform;
+    transition-duration: 0ms;
+    transform-origin: 0 0 0;
+    -webkit-transition-property: transform;
+    -webkit-transition-duration: 0ms;
+    -webkit-transform-origin: 0 0 0;
   }
   
   .jsx-4071316007 {
@@ -766,6 +805,27 @@ export default defineComponent({
         background-image: url(../assets/static/bg-5.png);
     }
   }
+  
+  @-webkit-keyframes  me_background_anima_safiri {
+    0% {
+        background-image: url(../assets/static/bg-1.png);
+    }
+    25% {
+        background-image: url(../assets/static/bg-2.png);
+    }
+
+    50% {
+        background-image: url(../assets/static/bg-3.png);
+    }
+    75% {
+        background-image: url(../assets/static/bg-4.png);
+    }
+    100% {
+        background-image: url(../assets/static/bg-5.png);
+    }
+  }
+
+
   @keyframes word_dance {
     0% {
       transform: translateY(5px);
